@@ -30,7 +30,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 
     body {
       margin: 0;
@@ -94,23 +94,6 @@
     .btn-agape:hover {
       background: var(--sage-deep);
       transform: translateY(-2px);
-    }
-
-    .btn-outline-agape {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 21px;
-      border: 1px solid rgba(63,93,70,.25);
-      border-radius: 999px;
-      color: var(--sage-deep);
-      font-weight: 800;
-      transition: background .2s ease;
-    }
-
-    .btn-outline-agape:hover {
-      background: white;
-      color: var(--sage-deep);
     }
 
     .hero {
@@ -181,7 +164,7 @@
       margin-top: 5px;
     }
 
-    .section-space { padding: 80px 0; }
+    .section-space { padding: 90px 0; }
 
     .section-kicker {
       color: var(--sage-dark);
@@ -207,7 +190,6 @@
       height: 100%;
       box-shadow: 0 10px 35px rgba(67,75,61,.045);
       transition: transform .22s ease, box-shadow .22s ease;
-      margin-bottom: 24px;
     }
 
     .service-card:hover {
@@ -236,6 +218,19 @@
       font-size: .85rem;
       font-weight: 700;
     }
+
+    .professional-card {
+      background: white;
+      border: 1px solid rgba(85,116,91,.08);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 35px rgba(67,75,61,.03);
+      height: 100%;
+      transition: 0.3s;
+    }
+    .professional-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .prof-avatar { font-size: 3rem; margin-bottom: 15px; display: inline-block; }
 
     .community {
       border-radius: 34px;
@@ -319,20 +314,21 @@
   <!-- Menú de Navegación -->
   <nav class="navbar navbar-expand-lg sticky-top py-3">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
         <span class="brand-mark">🌱</span> Espacio Ágape
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto gap-2 text-center align-items-center mt-3 mt-lg-0">
-          <li class="nav-item"><a class="nav-link px-3" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#talleres">Talleres</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
+        <ul class="navbar-nav ms-auto gap-1 text-center align-items-center mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link px-2" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#mirada">Nuestra mirada</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#servicios">Áreas de atención</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#profesionales">Profesionales</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#talleres">Talleres</a></li>
           <li class="nav-item ms-lg-2">
-            <a href="https://wa.me" target="_blank" class="btn-agape"><i class="fab fa-whatsapp"></i> Turnos</a>
+            <a href="https://wa.me" target="_blank" class="btn-agape"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp ↗</a>
           </li>
         </ul>
       </div>
@@ -348,5 +344,5 @@
             <span>📍</span> Colón, Buenos Aires
           </div>
           <h1 class="mb-4">Un espacio integral para el desarrollo, salud y educación</h1>
-          <p class="hero-copy mb-5 mx-auto mx-lg-0">Acompañamos a niños, adolescentes, adultos y sus familias desde una mirada respetuosa, profesional e interdisciplinaria.</p>
-          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+
+        
