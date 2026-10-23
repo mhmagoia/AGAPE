@@ -7,7 +7,7 @@
   <meta name="description" content="Espacio Ágape, consultorios interdisciplinarios en Colón, Buenos Aires.">
   <title>Espacio Ágape | Consultorios Interdisciplinarios</title>
 
-  <!-- Bootstrap 5, Google Fonts y FontAwesome para íconos -->
+  <!-- Bootstrap 5, Google Fonts y FontAwesome -->
   <link href="https://jsdelivr.net" rel="stylesheet">
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -69,19 +69,18 @@
     }
 
     .nav-link {
-      color: var(--ink);
+      color: var(--ink) !important;
       font-weight: 700;
       font-size: .95rem;
     }
-
-    .nav-link:hover, .nav-link:focus { color: var(--sage-dark); }
+    .nav-link:hover { color: var(--sage-dark) !important; }
 
     .btn-agape {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 9px;
-      padding: 14px 28px;
+      padding: 10px 24px;
       border-radius: 999px;
       border: 0;
       background: var(--sage-dark);
@@ -90,11 +89,20 @@
       box-shadow: 0 9px 22px rgba(85,116,91,.18);
       transition: transform .2s ease, background .2s ease;
     }
+    .btn-agape:hover { background: var(--sage-deep); transform: translateY(-2px); }
 
-    .btn-agape:hover {
-      background: var(--sage-deep);
-      transform: translateY(-2px);
+    .btn-outline-agape {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border: 1px solid rgba(63,93,70,.25);
+      border-radius: 999px;
+      color: var(--sage-deep);
+      font-weight: 800;
+      transition: background .2s ease;
     }
+    .btn-outline-agape:hover { background: white; color: var(--sage-deep); }
 
     .hero {
       position: relative;
@@ -120,28 +128,10 @@
       margin-bottom: 20px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.3rem, 4.5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .hero-copy {
-      color: var(--muted);
-      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
-      max-width: 580px;
-    }
-
+    .hero h1 { font-size: clamp(2.3rem, 4.5vw, 3.8rem); font-weight: 900; line-height: 1.1; }
+    .hero-copy { color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.2rem); max-width: 580px; }
     .hero-photo-wrap { position: relative; padding: 0 12px 18px 0; }
-
-    .hero-photo {
-      display: block;
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      border-radius: 36px 36px 100px 36px;
-      box-shadow: var(--shadow);
-    }
+    .hero-photo { display: block; width: 100%; height: 450px; object-fit: cover; border-radius: 36px 36px 100px 36px; box-shadow: var(--shadow); }
 
     .photo-note {
       position: absolute;
@@ -156,31 +146,11 @@
       color: var(--sage-deep);
       line-height: 1.35;
     }
-
-    .photo-note small {
-      display: block;
-      color: var(--muted);
-      font-weight: 500;
-      margin-top: 5px;
-    }
+    .photo-note small { display: block; color: var(--muted); font-weight: 500; margin-top: 5px; }
 
     .section-space { padding: 90px 0; }
-
-    .section-kicker {
-      color: var(--sage-dark);
-      text-transform: uppercase;
-      letter-spacing: .13em;
-      font-size: .76rem;
-      font-weight: 900;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .section-title {
-      font-weight: 900;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.15;
-    }
+    .section-kicker { color: var(--sage-dark); text-transform: uppercase; letter-spacing: .13em; font-size: .76rem; font-weight: 900; display: block; margin-bottom: 10px; }
+    .section-title { font-weight: 900; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; }
 
     .service-card {
       background: white;
@@ -191,99 +161,26 @@
       box-shadow: 0 10px 35px rgba(67,75,61,.045);
       transition: transform .22s ease, box-shadow .22s ease;
     }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-photo {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      display: block;
-    }
-
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .service-photo { width: 100%; height: 240px; object-fit: cover; display: block; }
     .service-content { padding: 30px; }
     .service-content h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 15px; }
     .service-content p { color: var(--muted); margin-bottom: 20px; }
 
-    .tag {
-      display: inline-block;
-      padding: 6px 14px;
-      margin: 4px 4px 4px 0;
-      border-radius: 999px;
-      background: var(--cream);
-      color: var(--sage-deep);
-      font-size: .85rem;
-      font-weight: 700;
-    }
+    .tag { display: inline-block; padding: 6px 14px; margin: 4px 4px 4px 0; border-radius: 999px; background: var(--cream); color: var(--sage-deep); font-size: .85rem; font-weight: 700; }
 
-    .professional-card {
-      background: white;
-      border: 1px solid rgba(85,116,91,.08);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 10px 35px rgba(67,75,61,.03);
-      height: 100%;
-      transition: 0.3s;
-    }
+    .professional-card { background: white; border: 1px solid rgba(85,116,91,.08); border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 10px 35px rgba(67,75,61,.03); height: 100%; transition: 0.3s; }
     .professional-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .prof-avatar { font-size: 3rem; margin-bottom: 15px; display: inline-block; }
 
-    .community {
-      border-radius: 34px;
-      padding: clamp(30px, 5vw, 60px);
-      background: linear-gradient(125deg, #f1ded4, #e4eddf);
-      box-shadow: var(--shadow);
-    }
-
-    .community-photo {
-      width: 100%;
-      height: 330px;
-      object-fit: cover;
-      border-radius: 24px;
-      box-shadow: 0 12px 35px rgba(67,75,61,.12);
-    }
+    .community { border-radius: 34px; padding: clamp(30px, 5vw, 60px); background: linear-gradient(125deg, #f1ded4, #e4eddf); box-shadow: var(--shadow); }
+    .community-photo { width: 100%; height: 330px; object-fit: cover; border-radius: 24px; box-shadow: 0 12px 35px rgba(67,75,61,.12); }
 
     .contact-section { background: #f3e8de; }
-
-    .contact-card {
-      background: rgba(255,255,255,.82);
-      border: 1px solid rgba(85,116,91,.08);
-      border-radius: 28px;
-      padding: clamp(24px, 4vw, 38px);
-      height: 100%;
-    }
-
-    .contact-line {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .contact-icon {
-      flex: 0 0 42px;
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      background: var(--sage);
-      border-radius: 14px;
-      color: var(--sage-dark);
-      font-size: 1.1rem;
-    }
-
-    .map-frame {
-      width: 100%;
-      height: 100%;
-      min-height: 380px;
-      border: 0;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-    }
+    .contact-card { background: rgba(255,255,255,.82); border: 1px solid rgba(85,116,91,.08); border-radius: 28px; padding: clamp(24px, 4vw, 38px); height: 100%; }
+    .contact-line { display: flex; align-items: flex-start; gap: 15px; margin: 20px 0; }
+    .contact-icon { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; background: var(--sage); border-radius: 14px; color: var(--sage-dark); font-size: 1.1rem; }
+    .map-frame { width: 100%; height: 100%; min-height: 380px; border: 0; border-radius: 24px; box-shadow: var(--shadow); }
 
     footer { background: var(--sage-deep); color: rgba(255,255,255,.82); }
     footer a { color: white; }
@@ -317,18 +214,18 @@
       <a class="navbar-brand d-flex align-items-center" href="#inicio">
         <span class="brand-mark">🌱</span> Espacio Ágape
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto gap-1 text-center align-items-center mt-3 mt-lg-0">
+        <ul class="navbar-nav ms-auto gap-2 align-items-center mt-3 mt-lg-0">
           <li class="nav-item"><a class="nav-link px-2" href="#inicio">Inicio</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#mirada">Nuestra mirada</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#servicios">Áreas de atención</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#profesionales">Profesionales</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#talleres">Talleres</a></li>
           <li class="nav-item ms-lg-2">
-            <a href="https://wa.me" target="_blank" class="btn-agape"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp ↗</a>
+            <a href="https://wa.me" target="_blank" class="btn-agape text-white"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp ↗</a>
           </li>
         </ul>
       </div>
@@ -344,5 +241,5 @@
             <span>📍</span> Colón, Buenos Aires
           </div>
           <h1 class="mb-4">Un espacio integral para el desarrollo, salud y educación</h1>
-
-        
+          <p class="hero-copy mb-5 mx-auto mx-lg-0">Acompañamos a niños, adolescentes, adultos y sus familias desde una mirada respetuosa, profesional e interdisciplinaria.</p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
